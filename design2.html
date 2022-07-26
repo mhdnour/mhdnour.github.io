@@ -88,6 +88,47 @@
                 cursor: pointer;
             }
 
+     .fabsbtn1 {
+                position: absolute;
+                bottom: 0;
+
+                margin: 1em;
+                left: 0;
+                z-index: 998;
+            }
+
+            .fabbtn1 {
+                display: block;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                text-align: center;
+                color: #fff;
+                background: #2ba307;
+                margin: 25px auto 0;
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),
+                    0 4px 8px rgba(0, 0, 0, 0.28);
+                cursor: pointer;
+                -webkit-transition: all 0.1s ease-out;
+                -moz-transition: all 0.1s ease-out;
+                -o-transition: all 0.1s ease-out;
+                transition: all 0.1s ease-out;
+                position: relative;
+                z-index: 998;
+                overflow: hidden;
+            }
+
+            .fabbtn1 > i {
+                font-size: 2em;
+                line-height: 55px;
+                -webkit-transition: all 0.2s ease-out;
+                -moz-transition: all 0.2s ease-out;
+                -o-transition: all 0.2s ease-out;
+                transition: all 0.2s ease-in-out;
+            }
+
+
+
         </style>
     </head>
     <body>
@@ -177,7 +218,11 @@
                 >
                     إضغط هنا لكتابة الاسم
                 </button>
-                
+                    <div class="fabsbtn1">
+                    <a id="primesave" class="fabbtn1" onclick="saveMobile()"
+                        ><i class="fa-solid fa-save"></i>
+                    </a>
+                </div>  
             </div>
 
 
@@ -315,7 +360,7 @@
                     context.textAlign = "center";
                     context.fillStyle = "#FFFFFF";
                     context.lineStyle = "#FFFFFF";
-                    context.font = "28px sans-serif";
+                    context.font = "28px FaktArabicPro";
                     context.fillText(text, 370, 533);
                 };
             }
