@@ -1,0 +1,100 @@
+﻿ 
+
+
+   
+     .boxAbout {
+            display: flex;
+             flex-wrap: wrap;
+             direction:ltr;
+          }
+
+
+      .one {
+        /*flex: 1 1 auto;*/
+        background-color:#fff; width:580px; 
+      }
+
+
+
+      .two {
+        /*flex: 1 1 auto;*/
+        background-color:#fff;
+        width:540px; 
+      }
+
+
+        .xleft {
+            right:90px;
+        }
+     
+
+        .ErRgihtText {
+              margin:60px 30px 30px 30px;
+        }
+   
+
+  
+        @media (max-width: 800px) {
+           .two {
+                    visibility:hidden;
+                    display:none;
+                     width:0px;
+              }
+
+              .ErRgihtText {
+                      margin:0px 13px 0px 0px;
+                 }
+   
+            
+            .one {
+                    background-color:#fff; width:340px; height:auto; 
+              }
+   }
+
+        @media screen and (min-width : 0px) and (max-width : 567px){
+         .one {
+                    background-color:#fff; width:340px;  height:auto; 
+              }
+}
+
+
+@media only screen and (min-width: 700px) and (max-width: 1035px) {
+
+    .two {
+        display: none;
+    }
+
+
+    .one {
+        width:auto;
+    }
+
+
+}
+
+
+
+    .demo-style-1-warp {
+        position: relative;
+    }
+
+
+    .demo-style-1-box-text {
+        display: block;
+        position: relative;
+        background: #505759;
+        border: 10px solid #fff;
+        color: #fff;
+        font-size: 32px;
+        padding: 45px 65px;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        line-height: 44px;
+    }
+
+
+        .demo-style-1-box-text.right {
+            right: 0;
+            transform: translateY(-50%);
+        }

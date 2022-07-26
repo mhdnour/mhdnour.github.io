@@ -1,0 +1,218 @@
+﻿
+.OverlayAniLeft {
+    height: 358px;
+    width: 670px;
+    /*right: 70%;*/
+    left:1px;
+    overflow: hidden;
+    top: 0px;
+    position: absolute;
+}
+
+.OverlayAni {
+    height: 358px;
+    width: 670px;
+    right: -15%;
+    overflow: hidden;
+    top: 0px;
+    position: absolute;
+}
+
+.OverlayButtomAni {
+    height: 425px;
+    width: 670px;
+    right: 10%;
+    overflow: hidden;
+    top: 0px;
+    opacity:0.3;
+    position: absolute;
+}
+
+
+
+.OverlayButtomAniEng {
+    position: absolute;
+    height: 450px;
+    width: 580px;
+    left: 10%;
+    overflow: hidden;
+    top: 0px;
+    opacity: 0.3;
+}
+
+
+
+
+@media (min-width:200px) and (max-width:1025px) {
+    .OverlayAniLeft {
+        display: none;
+    }
+
+    .OverlayButtomAniEng {
+        display: none;
+    }
+
+    .OverlayAni {
+        right: -40%;
+    }
+
+}
+
+@media (min-width:200px) and (max-width:700px) {
+    .OverlayAni {
+        display: none;
+    }
+    .OverlayButtomAni {
+        display: none;
+    }
+
+    .OverlayButtomAniEng {
+        display: none;
+    }
+
+    
+}
+
+ 
+
+.animix {
+    top: 50%;
+    left: 50%;
+    width: 560px;
+    height: 645px;
+    margin: -60px 0 0 -60px;
+    /*z-index: 100000;*/
+    -webkit-animation: spin 15s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 10s linear infinite;
+    background-image: url('../../Images/LoopLOgo.png');
+    opacity: 0.4;
+}
+
+
+.schTitleArea {
+    margin-bottom: 16px;
+    font-size: 22px;
+    font-family: FaktArabicProNormal;
+    background-color: rgba(255, 203, 67, 0.75);
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 4px 18px 1px 18px;
+}
+ 
+
+.schTitleAreaInfo {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-family: FaktArabicProNormal;
+    background-color: rgba(247, 247, 247, 0.75);
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 17px 18px 18px 18px;
+    line-height:35px;
+    direction:rtl;
+    text-align:justify;
+}
+
+
+
+.center-me {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            padding: 10px 0px 30px 0px; 
+        }
+
+
+
+    
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+
+
+
+        .xdiv {
+            background-color: rgba(255, 255, 255, 0.60);
+            width: 319px;
+            height: 190px;
+            margin: 10px;
+            text-align: center;
+            /*margin: 20px;*/
+            border-radius:10px;
+        }
+
+
+
+
+
+         .xdivFullback {
+            /*background-color: rgba(255, 255, 255, 0.60);*/
+            width: 320px;
+            height: 233px;
+            margin: 10px;
+            text-align: center;
+            margin: 20px;
+            border-radius:10px;
+        }
+
+
+
+        .xdivFullbackInside {
+          margin:45px 5px 4px 6px;
+        }
+
+            .xdivFullbackInside > h1, h2, h3 {
+                font-family: FaktArabicProNormal;
+                font-size: 25px;
+                color: #08336e;
+                font-weight: bold;
+                text-align: right;
+                direction: rtl;
+                margin: 0px 16px 0px 0px;
+            }
+
+            .xdivFullbackInside .xInfo {
+                font-family: FaktArabicProNormal;
+                font-size: 19px;
+                text-align: right;
+                direction: rtl;
+                margin: 5px 20px 0px 15px;
+                line-height: 30px;
+                color: #6a5e28;
+            }
+
+
+
+
+    @media (max-width: 800px) {
+               
+    .center-me {
+    padding:  0px; 
+    }
+
+       .xdivFullback {
+            /*background-color: rgba(255, 255, 255, 0.60);*/
+            width: 320px;
+            height: 233px;
+            text-align: center;
+            border-radius:10px;
+               transform:scale(0.9);
+    -ms-transform:scale(0.9); /* IE 9 */
+    -moz-transform:scale(0.9); /* Firefox */
+    -webkit-transform:scale(0.9); /* Safari and Chrome */
+    -o-transform:scale(0.9); /* Opera */
+        }
+
+
+    }

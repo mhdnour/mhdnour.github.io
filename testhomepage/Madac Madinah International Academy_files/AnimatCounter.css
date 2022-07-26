@@ -1,0 +1,326 @@
+﻿
+
+.ani_DivBox {
+height: 350px; background-image: url('../../mY_CSS/imgs/bg-subcri2z.jpg');
+}
+
+
+
+
+
+
+
+
+
+
+
+ 
+.hovereffects {
+    display: inline-circle;
+    font-size: 30px;
+    line-height: 90px;
+    cursor: pointer;
+    margin: 20px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    color: #808080;
+}
+
+
+
+    .hovereffects.small {
+        font-size: 20px;
+        line-height: 45px;
+        width: 45px;
+        height: 45px;
+        margin: 7px;
+    }
+
+
+
+    .hovereffects.mini {
+        font-size: 15px;
+        line-height: 32px;
+        width: 30px;
+        height: 30px;
+        margin: 7px;
+    }
+
+
+
+    .hovereffects.auto-width {
+        width: auto;
+        height: auto;
+        padding: 15px;
+    }
+
+
+
+    .hovereffects:after {
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        content: '';
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+
+
+    .hovereffects:before {
+        speak: none;
+        font-size: 48px;
+        line-height: 90px;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        display: circle;
+        -webkit-font-smoothing: antialiased;
+    }
+
+
+
+
+    .hovereffectsx.effect-4 {
+        /*width: 92px;
+        height: 92px;
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);*/
+        -webkit-animation: spinAround 9s linear infinite;
+        -moz-animation: spinAround 9s linear infinite;
+        animation: spinAround 9s linear infinite;
+    }
+
+
+    .hovereffects.effect-4 {
+        width: 92px;
+        height: 92px;
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
+    }
+
+
+
+        .hovereffects.effect-4.small {
+            width: 45px;
+            height: 45px;
+        }
+
+
+
+        .hovereffects.effect-4.mini {
+            width: 30px;
+            height: 30px;
+        }
+
+
+
+        .hovereffects.effect-4.sub-a {
+            -webkit-transition: box-shadow 0.2s;
+            -moz-transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s;
+        }
+
+
+
+        .hovereffects.effect-4:before {
+            line-height: 92px;
+        }
+
+
+
+        .hovereffects.effect-4:after {
+            top: -4px;
+            left: -4px;
+            padding: 0;
+            z-index: 10;
+            border: 4px dashed #fff;
+        }
+
+
+
+        .hovereffects.effect-4:hover {
+            box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            color: #ff6a00;
+        }
+
+
+
+            .hovereffects.effect-4:hover i {
+                color: #fff;
+            }
+
+
+
+        .hovereffects.effect-4.sub-b:hover {
+            -webkit-transition: box-shadow 0.2s;
+            -moz-transition: box-shadow 0.2s;
+            transition: box-shadow 0.2s;
+        }
+
+
+
+            .hovereffects.effect-4.sub-b:hover:after {
+                -webkit-animation: spinAround 9s linear infinite;
+                -moz-animation: spinAround 9s linear infinite;
+                animation: spinAround 9s linear infinite;
+            }
+
+
+
+@-webkit-keyframes spinAround {
+
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+
+
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+
+ 
+
+
+
+.counter {
+        text-align: center;
+    }
+
+    .employees, .customer, .design, .order {
+        /*margin-top: 70px;
+        margin-bottom: 70px;*/
+
+    }
+
+
+.CCcircle {
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to right, blue 50%, red 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 2s ease;
+    line-height: 80px;
+    text-align: center;
+    line-height: 80px;
+}
+
+    .CCcircle:hover {
+       
+        display: inline-block;
+        position: relative;
+        margin: 0 10px;
+        cursor: pointer;
+        transform: translate(0,-32px);
+        transition: all .2s ease-in;
+    } 
+
+
+
+
+.fcounter-count {
+   
+  
+    top:10px;
+   
+    display: inline-block;
+    font-family: FaktArabicProNormal;
+}
+
+ 
+
+
+ 
+
+
+    .employee-p, .customer-p, .order-p, .design-p {
+        font-size: 20px;
+        color: #004070;
+        line-height: 30px;
+        text-align:center;  
+         color:#004070; font-family: FaktArabicProNormal;  
+         margin-top:5px;
+         
+    }
+
+
+
+     .flex-AnimatecontainerT{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+
+
+.COuntBox {
+    position: relative;
+    width: 190px;
+    text-align: center;
+    /*margin: 0px 50px 20px 20px;*/
+    /*background-color:#808080;*/
+    border-right: 1px solid#bec3c7;
+}
+
+    .COuntBox :hover {
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+        -webkit-transform: scale(1);
+        -moz-transition: -moz-transform 0.8s, opacity 0.2s;
+        -moz-transform: scale(.9);
+        -ms-transform: scale(.9);
+        transition: transform 0.5s, opacity 0.2s;
+        transform: scale(1.1);
+    }
+
+   
+
+      .countTitle {
+            
+            width: auto;
+            height: auto;
+            margin: auto;
+          text-align:center;
+         color:#004070; font-family: FaktArabicProNormal;  
+        
+
+            
+        }
+
+
+     
+
+
+
+       @media (max-width: 500px) {
+  
+      .ani_DivBox {
+        height: auto; background-image: url('../../mY_CSS/imgs/bg-subcri2z.jpg');
+       }
+
+        .COuntBox {
+            position: relative;
+            width: 250px;
+            
+            margin-right: 15%;
+            text-align: center;
+            border-right: 0px solid#004070;
+            border-bottom: 1px solid#004070;
+
+            /*margin: 0px 50px 20px 20px;*/
+            /*background-color:#808080;*/
+        }
+
+
+   }
