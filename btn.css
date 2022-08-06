@@ -1,0 +1,54 @@
+.button {
+    
+  display: block;
+  width: 76px;
+  height: 46px;
+  border: none;
+  text-align: center;
+  text-justify: auto;
+  border-radius: 13%;
+  text-align: center;
+  color: #fff;
+  background: rgb(5, 128, 177);
+  margin: 25px auto 0;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  position: relative;
+  z-index: 998;
+  overflow: hidden;
+  text-decoration: none;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  
+}
+
+.button:hover {
+    background-color: #36ebff;
+    color: white;
+}
+
+
+
+/*Bounce*/
+@keyframes kreep {
+    0% {-webkit-transform: scale(1.1,.9);
+        transform: scale(1.1,.9);}
+   50% { -webkit-transform: scale(.9,1.1) translateY(-.5rem)}
+   70% { -webkit-transform: scale(1);
+         transform: scale(1);}
+}
+
+h1.kreep {
+  display: block;
+  /*name-duration-function(ease,eas-in,linear)-delay-count-direction */
+  animation: kreep 0.7s ease 2s infinite alternate;
+}
+
+h1.kreep:hover {
+  animation: none;
+}
+/*END BOUNCER*/

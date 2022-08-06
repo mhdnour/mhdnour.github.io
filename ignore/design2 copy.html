@@ -36,23 +36,22 @@
         ></script>
 
         <style>
-             @font-face {
+            @font-face {
                 font-family: "FaktArabicPro";
                 src: url("fonts/FaktArabicPro-Bold.ttf") format("truetype"),
-                url("fonts/FaktArabicPro-Normal.ttf") format("truetype"),
-                url("fonts/FaktArabicPro-Thin.ttf") format("truetype");
+                    url("fonts/FaktArabicPro-Normal.ttf") format("truetype"),
+                    url("fonts/FaktArabicPro-Thin.ttf") format("truetype");
                 font-style: normal;
                 font-weight: normal;
             }
 
             body {
-                background-color: #487DA9;
+                background-color: #487da9;
                 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23FFFFFF' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23FFFFFF'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
                 background-attachment: fixed;
                 background-size: cover;
                 font-family: "FaktArabicPro", sans-serif;
-
-                }
+            }
             /* */
             canvas {
                 max-width: 100%;
@@ -88,7 +87,7 @@
                 cursor: pointer;
             }
 
-     .fabsbtn1 {
+            .fabsbtn1 {
                 position: absolute;
                 bottom: 0;
 
@@ -96,7 +95,14 @@
                 left: 0;
                 z-index: 998;
             }
+            .fabsbtn2 {
+                position: absolute;
+                bottom: 0;
 
+                margin: 1em;
+                right: 0;
+                z-index: 998;
+            }
             .fabbtn1 {
                 display: block;
                 width: 56px;
@@ -118,7 +124,29 @@
                 overflow: hidden;
             }
 
-            .fabbtn1 > i {
+
+ .fabbtn {
+                display: block;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                text-align: center;
+                color: #fff;
+                background: #ff6608;
+                margin: 25px auto 0;
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),
+                    0 4px 8px rgba(0, 0, 0, 0.28);
+                cursor: pointer;
+                -webkit-transition: all 0.1s ease-out;
+                -moz-transition: all 0.1s ease-out;
+                -o-transition: all 0.1s ease-out;
+                transition: all 0.1s ease-out;
+                position: relative;
+                z-index: 998;
+                overflow: hidden;
+            }
+
+            .fabbtn > i {
                 font-size: 2em;
                 line-height: 55px;
                 -webkit-transition: all 0.2s ease-out;
@@ -127,14 +155,21 @@
                 transition: all 0.2s ease-in-out;
             }
 
-
-
+            .fabbtn1 > i {
+                font-size: 2em;
+                line-height: 55px;
+                -webkit-transition: all 0.2s ease-out;
+                -moz-transition: all 0.2s ease-out;
+                -o-transition: all 0.2s ease-out;
+                transition: all 0.2s ease-in-out;
+            }
         </style>
     </head>
+
     <body>
         <!-- As a heading -->
-        <nav class="navbar navbar-light sticky-top bg-light"  >
-            <div class="container-fluid ">
+        <nav class="navbar navbar-light sticky-top bg-light">
+            <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img
                         src="images/logo1.png"
@@ -148,12 +183,13 @@
                 <span class="navbar-text">بطاقة تهنئة من أكاديمية مداك</span>
                 <!-- Right elements -->
                 <div class="navbar-nav d-flex flex-row">
-                    <a class="text-reset me-3" href="#"><img
-                        src="images/logo2.png"
-                        height="25"
-                        alt="Logo"
-                        class="me-2 px-2"
-                        loading="lazy"
+                    <a class="text-reset me-3" href="#"
+                        ><img
+                            src="images/logo2.png"
+                            height="25"
+                            alt="Logo"
+                            class="me-2 px-2"
+                            loading="lazy"
                     /></a>
                     <!-- Notifications -->
                     <div class="dropdown">
@@ -169,36 +205,37 @@
                             <!-- <span
                                 class="badge rounded-pill badge-notification bg-danger"
                                 ></span >-->
-                            
                         </a>
                         <ul
                             class="dropdown-menu dropdown-menu-start"
                             aria-labelledby="navbarDropdownMenuLink"
                         >
                             <li>
-                                <a class="dropdown-item" href="#"
-                                data-mdb-toggle="modal"
-                    data-mdb-target="#exampleModal"
-                    >
-                   
-                    كتابة الاسم
-                    <i class="fa-solid fa-pen-to-square"></i></a>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-mdb-toggle="modal"
+                                    data-mdb-target="#exampleModal"
+                                >
+                                    كتابة الاسم
+                                    <i class="fa-solid fa-pen-to-square"></i
+                                ></a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="#"
-                                onclick="saveMobile()">
-                                    
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    onclick="saveMobile()"
+                                >
                                     حفظ الصورة
-                                    <i class="fa-solid fa-save"></i></a
-                                >
+                                    <i class="fa-solid fa-save"></i
+                                ></a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="index.html"
-                                >
-                                    
+                                <a class="dropdown-item" href="index.html">
                                     الرئيسية
-                                    <i class="fa-solid fa-home"></i></a
-                                >
+                                    <i class="fa-solid fa-home"></i
+                                ></a>
                             </li>
                         </ul>
                     </div>
@@ -218,14 +255,22 @@
                 >
                     إضغط هنا لكتابة الاسم
                 </button>
-                    <div class="fabsbtn1">
+                <div class="fabsbtn1">
                     <a id="primesave" class="fabbtn1" onclick="saveMobile()"
                         ><i class="fa-solid fa-save"></i>
                     </a>
-                </div>  
+                </div>
+
+                <div class="fabsbtn2">
+                    <a
+                        id="prime"
+                        class="fabbtn"
+                        data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal"
+                        ><i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </div>
             </div>
-
-
 
             <!-- Modal -->
             <div
@@ -279,11 +324,9 @@
         </div>
 
         <!-- Footer -->
-        <footer class="text-center text-lg-start mt-3 bg-light text-muted" >
+        <footer class="text-center text-lg-start mt-3 bg-light text-muted">
             <!-- Section: Social media -->
-            <section
-                class="text-center p-3"
-            >
+            <section class="text-center p-3">
                 <!-- Left -->
                 <div class="me-5 d-none d-lg-block">
                     <span>تابعنا على وسائل التواصل:</span>
@@ -314,7 +357,6 @@
                 <!-- Right -->
             </section>
             <!-- Section: Social media -->
-
         </footer>
         <!-- Footer -->
         <script
@@ -332,7 +374,7 @@
                 link.href = canvas.toDataURL();
                 link.click();
                 link.delete;
-            }        
+            }
 
             function btnclc() {
                 writetext = document.getElementById("textinput").value;

@@ -1,0 +1,39 @@
+
+.fabsbtn1 {
+    position: absolute;
+    bottom: 130px;
+
+    margin: 1em;
+    left: 85px;
+    z-index: 998;
+}
+
+.fabbtn1 {
+    display: block;
+    width: 196px;
+    height: 26px;
+    border-radius: 3%;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.573);
+    margin: 25px auto 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.24),
+        0 4px 8px rgba(0, 0, 0, 0.28);
+    cursor: pointer;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    -o-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+    position: relative;
+    z-index: 998;
+    overflow: hidden;
+}
+
+.fabbtn1 > i {
+    font-size: 2em;
+    line-height: 55px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-in-out;
+}

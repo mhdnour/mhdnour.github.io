@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>بطاقة تهنئة من مداك</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Font Awesome -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- MDB -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
+            rel="stylesheet"
+        />
+        <!-- MDB -->
+        <script
+            defer
+            type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"
+        ></script>
+
+        <style>
+            @font-face {
+                font-family: "FaktArabicPro";
+                src: url("fonts/FaktArabicPro-Bold.ttf") format("truetype"),
+                    url("fonts/FaktArabicPro-Normal.ttf") format("truetype"),
+                    url("fonts/FaktArabicPro-Thin.ttf") format("truetype");
+                font-style: normal;
+                font-weight: normal;
+            }
+
+            body {
+                background-color: #09bcff;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFFFFF'/%3E%3Cstop offset='1' stop-color='%23FF9821'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='2'%3E%3Cpath transform='translate(0 0)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='4' transform='rotate(0 800 450)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(0 0)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='4'%3E%3Cpath transform='translate(0 0)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='8' transform='rotate(0 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='rotate(0 1400 132)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+                background-attachment: fixed;
+                background-size: cover;
+                font-family: "FaktArabicPro", sans-serif;
+            }
+            /* */
+            canvas {
+                max-width: 100%;
+                height: auto;
+                font-family: "FaktArabicPro", sans-serif;
+                display: block;
+                /* border: 1px solid #888;*/
+                border-radius: 13px;
+                margin-top: 13px;
+                margin-bottom: 19px;
+            }
+
+            /* Container needed to position the button. Adjust the width as needed */
+            .maindiv {
+                max-width: 100%;
+                height: auto;
+                position: relative;
+                width: 100%;
+            }
+
+            /* Style the button and place it in the middle of the container/image */
+            .maindiv .btn {
+                position: absolute;
+                padding: 1px;
+                font-size: 18px;
+                border-radius: 5px;
+                bottom: 28%;
+                top: 66%;
+                right: 30%;
+                left: 30%;
+
+                color: white;
+                cursor: pointer;
+            }
+
+            .fabsbtn {
+                bottom: 0;
+                position: fixed;
+                margin: 1em;
+                right: 0;
+                z-index: 998;
+            }
+
+            .fabbtn {
+                display: block;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                text-align: center;
+                color: #fff;
+                background: #ff6608;
+                margin: 25px auto 0;
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),
+                    0 4px 8px rgba(0, 0, 0, 0.28);
+                cursor: pointer;
+                -webkit-transition: all 0.1s ease-out;
+                -moz-transition: all 0.1s ease-out;
+                -o-transition: all 0.1s ease-out;
+                transition: all 0.1s ease-out;
+                position: relative;
+                z-index: 998;
+                overflow: hidden;
+            }
+
+            .fabbtn > i {
+                font-size: 2em;
+                line-height: 55px;
+                -webkit-transition: all 0.2s ease-out;
+                -moz-transition: all 0.2s ease-out;
+                -o-transition: all 0.2s ease-out;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .fabsbtn1 {
+                position: absolute;
+                bottom: 0;
+
+                margin: 1em;
+                left: 0;
+                z-index: 998;
+            }
+
+            .fabsbtn2 {
+                position: absolute;
+                bottom: 0;
+
+                margin: 1em;
+                right: 0;
+                z-index: 998;
+            }
+
+            .fabbtn1 {
+                display: block;
+                width: 56px;
+                height: 56px;
+                border-radius: 50%;
+                text-align: center;
+                color: #fff;
+                background: #2ba307;
+                margin: 25px auto 0;
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),
+                    0 4px 8px rgba(0, 0, 0, 0.28);
+                cursor: pointer;
+                -webkit-transition: all 0.1s ease-out;
+                -moz-transition: all 0.1s ease-out;
+                -o-transition: all 0.1s ease-out;
+                transition: all 0.1s ease-out;
+                position: relative;
+                z-index: 998;
+                overflow: hidden;
+            }
+
+            .fabbtn1 > i {
+                font-size: 2em;
+                line-height: 55px;
+                -webkit-transition: all 0.2s ease-out;
+                -moz-transition: all 0.2s ease-out;
+                -o-transition: all 0.2s ease-out;
+                transition: all 0.2s ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- As a heading -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="images/logo1.png"
+                        height="30"
+                        alt="Logo"
+                        class="me-2 px-2"
+                        loading="lazy"
+                    />
+                </a>
+
+                <span class="navbar-text">بطاقة تهنئة من أكاديمية مداك</span>
+                <div class="navbar-nav d-flex flex-row">
+                    <a class="nav-link" href="#"
+                        ><img
+                            src="images/logo2.png"
+                            height="25"
+                            alt="Logo"
+                            class="me-2 px-2"
+                            loading="lazy"
+                    /></a>
+                </div>
+            </div>
+        </nav>
+        <div class="container" style="max-width: 780px">
+            <div class="maindiv canvas">
+                <canvas id="canvas" class="canvas shadow-4"></canvas>
+
+                <button
+                    class="btn"
+                    id="btnini"
+                    data-mdb-toggle="modal"
+                    data-mdb-target="#exampleModal"
+                >
+                    إضغط هنا لكتابة الاسم
+                </button>
+                <div class="fabsbtn1">
+                    <a id="primesave" class="fabbtn1" onclick="saveMobile()"
+                        ><i class="fa-solid fa-save"></i>
+                    </a>
+                </div>
+                <div class="fabsbtn2">
+                    <a
+                        id="prime"
+                        class="fabbtn"
+                        data-mdb-toggle="modal"
+                        data-mdb-target="#exampleModal"
+                        ><i class="fa-solid fa-pen-to-square"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"></h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-mdb-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <input
+                                type="text"
+                                id="textinput"
+                                placeholder="اكتب الاسم هنا ثم انقر على زر حفظ"
+                                class="form-control"
+                                style="font-size: 19px; text-align: right"
+                            />
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                id="showtoast"
+                                type="button"
+                                class="btn btn-primary"
+                                onclick="btnclc()"
+                                data-mdb-dismiss="modal"
+                            >
+                                حفظ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start mt-3 bg-light text-muted">
+            <!-- Section: Social media -->
+            <section class="text-center p-3">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>أكاديمية مداك:</span>
+                    <span>تابعنا على وسائل التواصل:</span>
+                </div>
+                <!-- Left -->
+
+                <!-- Right -->
+                <div>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="" class="me-4 text-reset">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <!-- Right -->
+            </section>
+            <!-- Section: Social media -->
+        </footer>
+        <!-- Footer -->
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"
+        ></script>
+
+        <script>
+            let writetext = "";
+
+            function saveMobile() {
+                const link = document.createElement("a");
+                link.download = "images/eidh2022.png";
+                link.href = canvas.toDataURL();
+                link.click();
+                link.delete;
+            }
+
+            function showtoast() {
+                const toastTrigger = document.getElementById("showtoast");
+                const toastLiveExample = document.getElementById("liveToast");
+                if (toastTrigger) {
+                    toastTrigger.addEventListener("click", () => {
+                        const toast = new bootstrap.Toast(toastLiveExample);
+
+                        toast.show();
+                    });
+                }
+            }
+
+            function btnclc() {
+                writetext = document.getElementById("textinput").value;
+                addTextToImage("images/eidh2022.png", writetext);
+
+                document.getElementById("btnini").innerText = "";
+
+                const toastLiveExample = document.getElementById("liveToast");
+                const toast = new bootstrap.Toast(toastLiveExample);
+                //toast.show();
+            }
+            function addTextToImage(imagePath, text) {
+                var imgcanvas = document.getElementById("canvas");
+                var context = imgcanvas.getContext("2d");
+                //         var textColor = " #2e86c1";
+                // var textY = 380;
+                // var textX = 550;
+
+                // Draw Image function
+                var img = new Image();
+                img.src = imagePath;
+                img.onload = function () {
+                    // make the canvas responsive
+                    imgcanvas.width = img.naturalWidth;
+                    imgcanvas.height = img.naturalHeight;
+                    context.drawImage(img, 0, 0);
+                    context.lineWidth = 1;
+                    context.textAlign = "center";
+                    context.fillStyle = "#FFFFFF";
+                    context.lineStyle = "#FFFFFF";
+                    context.font = "28px FaktArabicPro";
+                    context.fillText(text, 370, 533);
+                };
+            }
+
+            addTextToImage("images/eidh2022.png", writetext);
+        </script>
+    </body>
+</html>

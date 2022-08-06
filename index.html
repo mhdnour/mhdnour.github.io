@@ -1,489 +1,461 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>بطاقة تهنئة من مداك</title>
+<html lang="ar">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap"
-            rel="stylesheet"
-        />
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بطاقة تهنئة من مداك</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
 
-        <!-- Font Awesome -->
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-            rel="stylesheet"
-        />
-        <!-- Google Fonts -->
-        <link
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-            rel="stylesheet"
-        />
-        <!-- MDB -->
-        <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css"
-            rel="stylesheet"
-        />
-        <!-- MDB -->
-        <script
-            defer
-            type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"
-        ></script>
-
-        <style>
-            @font-face {
-                font-family: "FaktArabicPro";
-                src: url("fonts/FaktArabicPro-Bold.ttf") format("truetype"),
+    <style>
+        @font-face {
+            font-family: "FaktArabicPro";
+            src: url("fonts/FaktArabicPro-Bold.ttf") format("truetype"),
                 url("fonts/FaktArabicPro-Normal.ttf") format("truetype"),
                 url("fonts/FaktArabicPro-Thin.ttf") format("truetype");
-                font-style: normal;
-                font-weight: normal;
-            }
+            font-style: normal;
+            font-weight: normal;
+        }
 
-            body {
-                background-color: #09bcff;
-                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='1' y2='0'%3E%3Cstop offset='0' stop-color='%230FF'/%3E%3Cstop offset='1' stop-color='%23CF6'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFFFFF'/%3E%3Cstop offset='1' stop-color='%23FF9821'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23FFF' fill-opacity='0' stroke-miterlimit='10'%3E%3Cg stroke='url(%23a)' stroke-width='2'%3E%3Cpath transform='translate(0 0)' d='M1409 581 1450.35 511 1490 581z'/%3E%3Ccircle stroke-width='4' transform='rotate(0 800 450)' cx='500' cy='100' r='40'/%3E%3Cpath transform='translate(0 0)' d='M400.86 735.5h-83.73c0-23.12 18.74-41.87 41.87-41.87S400.86 712.38 400.86 735.5z'/%3E%3C/g%3E%3Cg stroke='url(%23b)' stroke-width='4'%3E%3Cpath transform='translate(0 0)' d='M149.8 345.2 118.4 389.8 149.8 434.4 181.2 389.8z'/%3E%3Crect stroke-width='8' transform='rotate(0 1089 759)' x='1039' y='709' width='100' height='100'/%3E%3Cpath transform='rotate(0 1400 132)' d='M1426.8 132.4 1405.7 168.8 1363.7 168.8 1342.7 132.4 1363.7 96 1405.7 96z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-                background-attachment: fixed;
-                background-size: cover;
-                font-family: "FaktArabicPro", sans-serif;
-            }
-            /* */
-            canvas {
-                max-width: 100%;
-                height: auto;
-                font-family: "FaktArabicPro", sans-serif;
-                display: block;
-                /* border: 1px solid #888;*/
-                border-radius: 13px;
-                margin-top: 13px;
-                margin-bottom: 19px;
-            }
 
-            /* Container needed to position the button. Adjust the width as needed */
-            .maindiv {
-                max-width: 100%;
-                height: auto;
-                position: relative;
-                width: 100%;
-            }
+        canvas {
+            max-width: 100%;
+            height: auto;
+            font-family: "FaktArabicPro", sans-serif;
+            display: block;
+            /* border: 1px solid #888;*/
+            /* border-radius: 13px; */
+            /* margin-top: 13px;
+            margin-bottom: 19px; */
+        }
 
-            /* Style the button and place it in the middle of the container/image */
-            .maindiv .btn {
-                position: absolute;
-                padding: 1px;
-                font-size: 18px;
-                border-radius: 5px;
-                bottom: 28%;
-                top: 66%;
-                right: 30%;
-                left: 30%;
+        .madacfonts {
+            font-family: "FaktArabicPro", sans-serif;
+        }
 
-                color: white;
-                cursor: pointer;
-            }
+        * {
+            font-family: "FaktArabicPro", sans-serif;
+            font-size: 13px;
+        }
 
-            .fabsbtn {
-                bottom: 0;
-                position: fixed;
-                margin: 1em;
-                right: 0;
-                z-index: 998;
-            }
+        footer {
+            color: white;
+        }
 
-            .fabbtn {
-                display: block;
-                width: 56px;
-                height: 56px;
-                border-radius: 50%;
-                text-align: center;
-                color: #fff;
-                background: #ff6608;
-                margin: 25px auto 0;
-                box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),
-                    0 4px 8px rgba(0, 0, 0, 0.28);
-                cursor: pointer;
-                -webkit-transition: all 0.1s ease-out;
-                -moz-transition: all 0.1s ease-out;
-                -o-transition: all 0.1s ease-out;
-                transition: all 0.1s ease-out;
-                position: relative;
-                z-index: 998;
-                overflow: hidden;
-            }
+        nav {
+            background: rgba(0, 0, 0, 0.7);
 
-            .fabbtn > i {
-                font-size: 2em;
-                line-height: 55px;
-                -webkit-transition: all 0.2s ease-out;
-                -moz-transition: all 0.2s ease-out;
-                -o-transition: all 0.2s ease-out;
-                transition: all 0.2s ease-in-out;
-            }
+        }
 
-            .fabsbtn1 {
-                position: absolute;
-                bottom: 0;
+        #imgbg {
+            background-color: #0c7ca5;
+            background-image: url("images/bgmadac.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
-                margin: 1em;
-                left: 0;
-                z-index: 998;
-            }
+        #cards {
+            margin-top: 83px;
 
-            .fabbtn1 {
-                display: block;
-                width: 56px;
-                height: 56px;
-                border-radius: 50%;
-                text-align: center;
-                color: #fff;
-                background: #2ba307;
-                margin: 25px auto 0;
-                box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),
-                    0 4px 8px rgba(0, 0, 0, 0.28);
-                cursor: pointer;
-                -webkit-transition: all 0.1s ease-out;
-                -moz-transition: all 0.1s ease-out;
-                -o-transition: all 0.1s ease-out;
-                transition: all 0.1s ease-out;
-                position: relative;
-                z-index: 998;
-                overflow: hidden;
-            }
+        }
 
-            .fabbtn1 > i {
-                font-size: 2em;
-                line-height: 55px;
-                -webkit-transition: all 0.2s ease-out;
-                -moz-transition: all 0.2s ease-out;
-                -o-transition: all 0.2s ease-out;
-                transition: all 0.2s ease-in-out;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- As a heading -->
-        <nav class="navbar navbar-light bg-light">
+.no-border {
+    border: 0;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+     }
+
+.kreep{
+
+    position: absolute;
+    bottom: 10px;
+    margin: 1em;
+    right: 10px;
+    z-index: 998;
+}
+
+
+
+    </style>
+
+
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="lang.css" rel="stylesheet">
+<link href="btnTransparent.css" rel="stylesheet">
+<link href="btn.css" rel="stylesheet">
+</head>
+
+<body dir="rtl">
+    
+    <div class="floating-container">
+      <div class="floating-button">
+        ar
+      </div>
+      <div class="element-container">
+    
+        <a href="indexen.html"> <span class="float-element tooltip-left">
+          en</a>
+        </span>
+          <span class="float-element">
+            <a href="#"> <span class="float-element tooltip-left">
+                ar</a>
+        </span>
+      </div>
+    </div>
+
+
+
+
+    <div class="bg-image" id="imgbg" style=" overscroll-behavior-y: contain;">
+
+        <nav class="navbar navbar-light fixed-top" dir="ltr">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img
-                        src="images/logo1.png"
-                        height="30"
-                        alt="Logo"
-                        class="me-2 px-2"
-                        loading="lazy"
-                    />
+                    <img src="images/logo1.png" height="35" alt="Logo" class="me-2 px-2" loading="lazy" />
                 </a>
 
-                <span class="navbar-text">بطاقة تهنئة من أكاديمية مداك</span>
+                <span class="navbar-text h6" style="color:white;">بطاقة تهنئة من أكاديمية مداك</span>
                 <div class="navbar-nav d-flex flex-row">
-                    <a class="nav-link mx-2" href="design2.html">design
-                        <span class="badge rounded-pill badge-notification bg-danger">2</span>
-                    </a>
-                    <a class="nav-link" href="#"
-                        ><img
-                            src="images/logo2.png"
-                            height="25"
-                            alt="Logo"
-                            class="me-2 px-2"
-                            loading="lazy"
-                    /></a>
+                    <a class="nav-link" href="#"><img src="images/logo.png" height="35" alt="Logo" class="me-2 px-2"
+                            loading="lazy" /></a>
                 </div>
             </div>
         </nav>
-        <div class="container" style="max-width: 780px">
-            <div class="maindiv canvas">
-                <canvas id="canvas" class="canvas shadow-4"></canvas>
 
-                <button
-                    class="btn"
-                    id="btnini"
-                    data-mdb-toggle="modal"
-                    data-mdb-target="#exampleModal"
-                >
-                    إضغط هنا لكتابة الاسم
-                </button>
-                <div class="fabsbtn1">
-                    <a id="primesave" class="fabbtn1" onclick="saveMobile()"
-                        ><i class="fa-solid fa-save"></i>
-                    </a>
-                </div>
-            </div>
+        <div id="cards" class="row mt-6">
 
-            <div class="fabsbtn">
-                <a
-                    id="prime"
-                    class="fabbtn"
-                    data-mdb-toggle="modal"
-                    data-mdb-target="#exampleModal"
-                    ><i class="fa-solid fa-pen-to-square"></i>
-                </a>
-            </div>
+            <div class="row align-items-center justify-content-center mb-3 mt-6">
 
-            <div
-                class="toast-container text-white position-fixed bottom-0 end-0 p-2"
-            >
-                <div
-                    id="liveToast"
-                    class="toast text-white bg-dark"
-                    role="alert"
-                    aria-live="assertive"
-                    aria-atomic="true"
-                >
-                    <div class="toast-header bg-dark text-white">
-                        <!-- <img src="..." class="rounded me-2" alt="..." /> -->
-                        <!-- <strong class="me-auto">Bootstrap</strong>-->
-                        <small>X</small>
-                        <button
-                            type="button"
-                            class="btn-close text-white"
-                            data-bs-dismiss="toast"
-                            aria-label="Close"
-                        ></button>
+                <div class="col-sm-6" style="max-width: 450px;">
+                    <div class="card text-center mx-4 my-2 ">
+                        <div class="card-header madacfonts"></div>
+                        <!-- <img src="images/eidh2022.png" class="card-img-top"  /> -->                        
+                        <canvas id="canvas" class="canvas shadow-4"></canvas>
+                        <div class="fabsbtn1">
+                            <a id="primesave1" class="fabbtn1" 
+                            data-mdb-toggle="modal"
+                            data-mdb-target="#exampleModald1"
+                                >اضغط هنا لكتابة الاسم
+                            </a>
+                        </div>
+
+                        <h1 class="kreep" id="btnsave1" hidden>
+                            <button class="button button5" onclick="saveMobile()"><b>حفظ</b></button>
+                          </h1>
+                        <div class="card-body">
+                        </div>
                     </div>
-                    <div class="toast-body text-white">
-                        <p>
-                            <small>
-                                <i class="fa-solid fa-laptop"></i>
+                </div>
+                <div class="col-sm-6" style="max-width: 450px;">
+                    <div class="card text-center mx-4 my-2">
+                        <div class="card-header madacfonts"></div>
+                        <canvas id="canvas1" class="canvas shadow-4"></canvas>
+                        <div class="fabsbtn1">
+                            <a id="primesave2" class="fabbtn1" data-mdb-toggle="modal"
+                            data-mdb-target="#exampleModald2"
+                                >اضغط هنا لكتابة الاسم
+                            </a>
+                        </div>
 
-                                لحفظ الصورة من جهاز الحاسب انقر على الصورة بزر
-                                الماوس الأيمن واختر حفظ الصورة.</small
-                            >
-                        </p>
+                        <h1 class="kreep" id="btnsave2" hidden>
+                            <button class="button button5" onclick="saveMobile()"><b>حفظ</b></button>
+                          </h1>
 
-                        <p>
-                            <small>
-                                <i class="fa-solid fa-mobile"></i>
+                        <!-- <img src="images/eidf.jpg" class="card-img-top" alt="Fissure in Sandstone" /> -->
+                        <div class="card-body">
 
-                                لحفظ الصورة من الجوال اضغط على الصورة لمدة
-                                ثانتين واختر حفظ.</small
-                            >
-                        </p>
-                        <p>....</p>
+
+                            
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Modal -->
-            <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-            >
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel"></h5>
-                            <button
-                                type="button"
-                                class="btn-close"
-                                data-mdb-dismiss="modal"
-                                aria-label="Close"
-                            ></button>
-                        </div>
-                        <div class="modal-body">
-                            <input
-                                type="text"
-                                id="textinput"
-                                placeholder="اكتب الاسم هنا ثم انقر على زر حفظ"
-                                class="form-control"
-                                style="font-size: 19px; text-align: right"
-                            />
-                        </div>
-                        <div class="modal-footer">
-                            <!-- <button
-                                type="button"
-                                class="btn btn-secondary"
-                                data-mdb-dismiss="modal"
-                            >
-                                Close
-                            </button> -->
-                            <button
-                                id="showtoast"
-                                type="button"
-                                class="btn btn-primary"
-                                onclick="btnclc()"
-                                data-mdb-dismiss="modal"
-                            >
-                                حفظ
-                            </button>
-                        </div>
-                    </div>
+
+
+
+        <!-- Modal for design 2 -->
+        <div
+        class="modal fade"
+        id="exampleModald2"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> 
+اكتب اسمك هنا
+                        
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-mdb-dismiss="modal"
+                        aria-label="Close" 
+                    ></button>
+                </div>
+                <div class="modal-body">
+                    <input
+                        type="text"
+                        id="textinput2"
+                        placeholder="اكتب اسمك هنا"
+                        class="form-control"
+                        style="font-size: 19px; text-align: right"
+                    />
+                </div>
+                <div class="modal-footer">
+                    <button
+                        id="ok2"
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="btnview2()"
+                        data-mdb-dismiss="modal"
+                    >
+                        عرض
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
+<!-- 
 
-        <!-- Footer -->
-        <footer class="text-center text-lg-start bg-light text-muted mt-3">
-            <!-- Section: Social media -->
-            <section
-                class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
-            >
-                <!-- Left -->
-                <div class="me-5 d-none d-lg-block">
-                    <span>تابعنا على وسائل التواصل:</span>
+data-mdb-toggle="modal"
+data-mdb-target="#exampleModal"
+
+-->
+
+    <!-- Modal for design 1-->
+    <div
+        class="modal fade"
+        id="exampleModald1"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+    >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        اكتب اسمك هنا
+                    </h5>
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-mdb-dismiss="modal"
+                        aria-label="Close"
+                    ></button>
                 </div>
-                <!-- Left -->
-
-                <!-- Right -->
-                <div>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-github"></i>
-                    </a>
+                <div class="modal-body">
+                    <input
+                        type="text"
+                        id="textinput"
+                        placeholder="اكتب اسمك هنا"
+                        class="form-control"
+                        style="font-size: 19px; text-align: right"
+                    />
                 </div>
-                <!-- Right -->
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Links  -->
-            <section class="">
-                <div class="container text-center text-md-start mt-5">
-                    <!-- Grid row -->
-                    <div class="row mt-3">
-                        <!-- Grid column -->
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <!-- Content -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                <i class="fas fa-gem me-3"></i>أكاديمية مداك
-                            </h6>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit.
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-
-                        <!-- Grid column -->
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">
-                                رابط مفيدة
-                            </h6>
-                            <p>
-                                <a href="#!" class="text-reset">رابط</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">رابط</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">رابط</a>
-                            </p>
-                            <p>
-                                <a href="#!" class="text-reset">رابط</a>
-                            </p>
-                        </div>
-
-                        <div
-                            class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4"
-                        >
-                            <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">للتواصل</h6>
-                            <p><i class="fas fa-home me-3"></i> العنوان</p>
-                            <p>
-                                <i class="fas fa-envelope me-3"></i>
-                                info@example.com
-                            </p>
-                            <p>
-                                <i class="fas fa-phone me-3"></i> + 01 234 567
-                                88
-                            </p>
-                            <p>
-                                <i class="fas fa-print me-3"></i> + 01 234 567
-                                89
-                            </p>
-                        </div>
-                        <!-- Grid column -->
-                    </div>
-                    <!-- Grid row -->
+                <div class="modal-footer">
+                    <button
+                        id="ok1"
+                        type="button"
+                        class="btn btn-primary"
+                        onclick="btnview1()"
+                        data-mdb-dismiss="modal"
+                    >
+                        عرض
+                    </button>
                 </div>
-            </section>
-            <!-- Section: Links  -->
-
-            <!-- Copyright -->
-            <div
-                class="text-center p-4"
-                style="background-color: rgba(0, 0, 0, 0.05)"
-            >
-                © 2022 جميع الحقوق محفوظة:
-                <a class="text-reset fw-bold" href="#"
-                    >بطاقة تهنئة من أكاديمية مداك</a
-                >
             </div>
+        </div>
+    </div>
+
+
+
+
+
+        </div>
+
+
+        <footer class="" style="background-color: #00477c">
+            <!-- Grid container -->
+            <div class="container text-right align-items-right justify-content-right">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-1 mb-md-0 my-1" style="background-color: #00477c;">
+                        <h5 class="mt-4">نسعد بتواصلك معنا</h5>
+                        <hr>
+                        </br>
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i>
+                            المقر الرئيسي
+                            المدينة المنورة -حي أبو كبير
+                        </p>
+                        <p>
+
+                            <i class="fa fa-print" aria-hidden="true"></i>
+                            صندوق بريد: 42396
+                            <br>
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                            <a href="mailto:info@madac.edu.sa" style="color: white;">info@madac.edu.sa</a>
+
+
+
+                        </p>
+
+                        <p>
+                            <i class="fa fa-phone fa-flip-horizontal" aria-hidden="true"></i>
+                            <a style="margin-bottom:5px; color: white;" class="madacfonts"
+                                href="tel:+00966 84611234">00966533360513</a>
+
+                        </p>
+
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-md-0 " style="background-color:#686e6f;">
+                        <h5 class="mt-4">ساعات العمل الرسمية</h5>
+                        <hr>
+                        </br>
+                        <p>
+                            الأحد - الخميس
+                            8 ص – 3:00 م
+                        </p>
+                        <hr>
+                        <h4 class="mt-1">عن مداك</h4>
+
+                        </br>
+                        <p>
+
+
+                            مشروع تعليمي وقفي غير ربحي ينطلق من المدينة المنورة أنموذج فريد يستمد عمقه من المكان
+                            الفريد حيث مدينة رسول الله صلى الله عليه وسلم. تأصيل وتجذير القيم الإنسانية الإسلامية.
+                        </p>
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-1 mb-md-0" style="background-color:#004070;">
+                        <h5 class="mt-4">خارطة الموقع</h5>
+                        <hr>
+                        </br>
+                        <p>
+                        <div class="">
+                            <a class="" href="https://goo.gl/maps/AoofuL8V58vshNdS8">
+
+                                <img class="" height="210px;" src="https://madac.edu.sa/map.png" alt="">
+                            </a>
+                        </div>
+                        </p>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
             <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                جميع الحقوق محفوظة لأكاديمية مداك - © 2022   
+                <!-- Copyright -->
         </footer>
-        <!-- Footer -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-            crossorigin="anonymous"
-        ></script>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
 
         <script>
             let writetext = "";
+            let selectedPic = "";
+    
+            function btnview1() {
+    
+                writetext = document.getElementById("textinput").value;
+    
+                selectedPic = "images/eidh2022.png";
+                addTextToImage();
+                document.getElementById("primesave1").hidden = true;
+                document.getElementById("btnsave1").hidden = false;
+                document.getElementById("btnsave2").hidden = true;
 
+
+                // id="btnsave2"
+            }
+    
+            function btnview2() {
+    
+                writetext = document.getElementById("textinput2").value;
+    
+    
+                selectedPic = "images/eidf.png";
+                downloadsecond();
+                document.getElementById("primesave2").hidden = true;
+                document.getElementById("btnsave1").hidden = true;
+                document.getElementById("btnsave2").hidden = false;
+            }
+    
             function saveMobile() {
+               
+              
                 const link = document.createElement("a");
-                link.download = "images/eidh2022.png";
-                link.href = canvas.toDataURL();
+    
+                if (selectedPic === "images/eidh2022.png") {
+    
+                    addTextToImage();
+                    link.download = "images/eidh2022.png";
+                    link.href = document.getElementById("canvas").toDataURL();
+                }
+                if (selectedPic === "images/eidf.png") {
+    
+                    downloadsecond();
+                    link.download = "images/eidf.png";
+                    link.href = document.getElementById("canvas1").toDataURL();
+                }
+    
                 link.click();
                 link.delete;
             }
-
-            function showtoast() {
-                const toastTrigger = document.getElementById("showtoast");
-                const toastLiveExample = document.getElementById("liveToast");
-                if (toastTrigger) {
-                    toastTrigger.addEventListener("click", () => {
-                        const toast = new bootstrap.Toast(toastLiveExample);
-
-                        toast.show();
-                    });
-                }
-            }
-
-            function btnclc() {
-                writetext = document.getElementById("textinput").value;
-                addTextToImage("images/eidh2022.png", writetext);
-
-                document.getElementById("btnini").innerText = "";
-
-                const toastLiveExample = document.getElementById("liveToast");
-                const toast = new bootstrap.Toast(toastLiveExample);
-                //toast.show();
-            }
-            function addTextToImage(imagePath, text) {
+    
+            // function btnclc() {
+            //     writetext = document.getElementById("textinput").value;
+            //     if (selectedPic === "") {
+            //         alert("select design!");
+            //         return;
+            //     }
+    
+            //     if (selectedPic === "images/eidf.png") { downloadsecond(); }
+            //     else {
+            //         addTextToImage();
+            //     }
+    
+            // }
+            function addTextToImage() {
                 var imgcanvas = document.getElementById("canvas");
                 var context = imgcanvas.getContext("2d");
-                //         var textColor = " #2e86c1";
-                // var textY = 380;
-                // var textX = 550;
-
+    
                 // Draw Image function
                 var img = new Image();
-                img.src = imagePath;
+    
+                img.src = "images/eidh2022.png";
                 img.onload = function () {
-                    // make the canvas responsive
                     imgcanvas.width = img.naturalWidth;
                     imgcanvas.height = img.naturalHeight;
                     context.drawImage(img, 0, 0);
@@ -492,11 +464,34 @@
                     context.fillStyle = "#FFFFFF";
                     context.lineStyle = "#FFFFFF";
                     context.font = "28px FaktArabicPro";
-                    context.fillText(text, 370, 533);
+                    context.fillText(writetext, 370, 533);
                 };
             }
-
-            addTextToImage("images/eidh2022.png", writetext);
+    
+            function downloadsecond() {
+                var imgcanvas2 = document.getElementById("canvas1");
+                var context2 = imgcanvas2.getContext("2d");
+    
+                // Draw Image function
+                var img2 = new Image();
+    
+                img2.src = "images/eidf.png";
+                img2.onload = function () {
+                    imgcanvas2.width = img2.naturalWidth;
+                    imgcanvas2.height = img2.naturalHeight;
+                    context2.drawImage(img2, 0, 0);
+                    context2.lineWidth = 1;
+                    context2.textAlign = "center";
+                    context2.fillStyle = "#000";
+                    context2.lineStyle = "#000";
+                    context2.font = "28px FaktArabicPro";
+                    context2.fillText(writetext, 370, 533);
+                };
+            }
+    
+            downloadsecond();
+            addTextToImage();
         </script>
-    </body>
+</body>
+
 </html>

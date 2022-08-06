@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madac greeting card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script defer type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.3.0/mdb.min.js"></script>
+
+        <script defer type="text/javascript"
+        src="offlinemdb.js"></script>
+
+
+
+    <style>
+        @font-face {
+            font-family: "FaktArabicPro";
+            src: url("fonts/FaktArabicPro-Bold.ttf") format("truetype"),
+                url("fonts/FaktArabicPro-Normal.ttf") format("truetype"),
+                url("fonts/FaktArabicPro-Thin.ttf") format("truetype");
+            font-style: normal;
+            font-weight: normal;
+        }
+
+
+        canvas {
+            max-width: 100%;
+            height: auto;
+            font-family: "FaktArabicPro", sans-serif;
+            display: block;
+            /* border: 1px solid #888;*/
+            /* border-radius: 13px;
+            margin-top: 13px;
+            margin-bottom: 19px; */
+        }
+
+        .madacfonts {
+            font-family: "FaktArabicPro", sans-serif;
+        }
+
+        * {
+            font-family: "FaktArabicPro", sans-serif;
+            font-size: 13px;
+        }
+
+        footer {
+            color: white;
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+
+        }
+
+        #imgbg {
+            background-color: #0c7ca5;
+            background-image: url("images/bgmadac.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #cards {
+            margin-top: 83px;
+
+        }
+
+.no-border {
+    border: 0;
+    box-shadow: none; /* You may want to include this as bootstrap applies these styles too */
+     }
+
+
+     .kreep{
+
+position: absolute;
+bottom: 10px;
+margin: 1em;
+right: 10px;
+z-index: 998;
+}
+
+    </style>
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="lang.css" rel="stylesheet">
+<link href="btnTransparent.css" rel="stylesheet">
+<link href="btn.css" rel="stylesheet">
+
+</head>
+
+<body >
+
+    
+    <div class="floating-container">
+      <div class="floating-button">
+        en
+      </div>
+      <div class="element-container">
+    
+        <a href="index.html"> <span class="float-element tooltip-left">
+          ar</a>
+        </span>
+          <span class="float-element">
+            <a href="#"> <span class="float-element tooltip-left">
+                en</a>
+        </span>
+      </div>
+    </div>
+
+<div class="bg-image" id="imgbg" style="overscroll-behavior-y: contain;">
+
+        <nav class="navbar navbar-light fixed-top" dir="ltr">
+            <div class="container-fluid">
+
+                
+                    <a class="navbar-brand" href="#">
+                        <img src="images/logo1.png" height="35" alt="Logo" class="px-1" loading="lazy" />
+                    </a>
+    
+                    <span class="navbar-text h6" style="color:white;">Madac greeting card</span>
+                    <div class="navbar-nav d-flex flex-row">
+                        <a class="nav-link" href="#"><img src="images/logo.png" height="35" alt="Logo" class="px-1"
+                                loading="lazy" /></a>
+                    </div>                                   
+                
+            </div>
+        </nav>
+
+        <div id="cards" class="row mt-6">
+
+            <div class="row align-items-center justify-content-center mb-3 mt-6">
+
+                <div class="col-sm-6" style="max-width: 450px;">
+                    <div class="card text-center mx-4 my-2 ">
+                        <div class="card-header madacfonts"></div>
+                        <!-- <img src="images/eidh2022.png" class="card-img-top"  /> -->                        
+                        <canvas id="canvas" class="canvas shadow-4"></canvas>
+                        <div class="fabsbtn1">
+                            <a id="primesave1" class="fabbtn1" 
+                                data-mdb-toggle="modal"
+                                data-mdb-target="#exampleModald1"
+                                >
+                                write your name here
+                            </a>
+                        </div>
+
+                        <h1 class="kreep" hidden id="btnsave1">
+                            <button class=" shadow button button5" onclick="saveMobile()">
+                                <b>save</b></button>
+                          </h1>
+                        <div class="card-body">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6" style="max-width: 450px;">
+                    <div class="card text-center mx-4 my-2">
+                        <div class="card-header madacfonts"></div>
+                        <canvas id="canvas1" class="canvas shadow-4"></canvas>
+                        <div class="fabsbtn1">
+                            <a id="primesave2" class="fabbtn1" 
+                            data-mdb-toggle="modal"
+                                data-mdb-target="#exampleModald2"
+                                >
+                                write your name here
+                            </a>
+                        </div>
+
+                        <h1 class="kreep" hidden id="btnsave2">
+                            <button class="button button5" onclick="saveMobile()">
+                                <b>save</b></button>
+                          </h1>
+                        <!-- <img src="images/eidf.jpg" class="card-img-top" alt="Fissure in Sandstone" /> -->
+                        <div class="card-body">
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+        </div>
+
+
+        <!-- Modal for design 2 -->
+            <div
+                class="modal fade"
+                id="exampleModald2"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel"> 
+write your name and click view - design #2
+                                
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-mdb-dismiss="modal"
+                                aria-label="Close" 
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <input
+                                type="text"
+                                id="textinput2"
+                                placeholder="Wirte your name"
+                                class="form-control"
+                                style="font-size: 19px; text-align: right"
+                            />
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                id="ok2"
+                                type="button"
+                                class="btn btn-primary"
+                                onclick="btnview2()"
+                                data-mdb-dismiss="modal"
+                            >
+                                View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- 
+
+data-mdb-toggle="modal"
+data-mdb-target="#exampleModal"
+
+ -->
+
+            <!-- Modal for design 1-->
+            <div
+                class="modal fade"
+                id="exampleModald1"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+            >
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">
+                                write your name and click view - design #1
+                            </h5>
+                            <button
+                                type="button"
+                                class="btn-close"
+                                data-mdb-dismiss="modal"
+                                aria-label="Close"
+                            ></button>
+                        </div>
+                        <div class="modal-body">
+                            <input
+                                type="text"
+                                id="textinput"
+                                placeholder="Wirte your name"
+                                class="form-control"
+                                style="font-size: 19px; text-align: right"
+                            />
+                        </div>
+                        <div class="modal-footer">
+                            <button
+                                id="ok1"
+                                type="button"
+                                class="btn btn-primary"
+                                onclick="btnview1()"
+                                data-mdb-dismiss="modal"
+                            >
+                                View
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+        <footer class="" style="background-color: #00477c">
+            <!-- Grid container -->
+            <div class="container text-right align-items-right justify-content-right">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-1 mb-md-0 my-2" style="background-color: #00477c;">
+                        <h5 class="mt-4">We are happy to hear from you</h5>
+                        <hr>
+                        
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i>
+                           Medina – Abu Kubir Dist -Jabla bin Thour Street
+                        </p>
+                        <p>
+
+                            <i class="fa fa-print" aria-hidden="true"></i>
+                            P.O.Box 42396
+                            
+                        </p>
+                        <p>
+                            <i class="fa fa-envelope-open" aria-hidden="true"></i>
+                            <a href="mailto:info@madac.edu.sa" style="color: white;">info@madac.edu.sa</a>
+
+
+
+                        </p>
+
+                        <p>
+                            <i class="fa fa-phone fa-flip-horizontal" aria-hidden="true"></i>
+                            <a style="margin-bottom:5px; color: white;" class="madacfonts"
+                                href="tel:+00966 84611234">00966533360513</a>
+
+                        </p>
+
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-md-0 " style="background-color:#686e6f;">
+                        <h5 class="mt-4">
+                            Work hours
+                        </h5>
+                        <hr>
+                        
+                        <p>
+                            From Sunday to Thursday
+                            From 8 AM – 3:00 PM
+                        </p>
+                        <hr>
+                        <h4 class="mt-4">
+                            Madac:
+                        </h4>
+
+                        
+                        <p>
+                            A non-profit educational project. A unique model, in a unique location; the city of the prophet, may the peace and blessings of Allah be upon him. Concentrates on instilling Islamic human values in learners.                   
+                             </p>
+
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-4 col-md-12 mb-1 mb-md-0" style="background-color:#004070;">
+                        <h5 class="mt-4">
+                            location
+                        </h5>
+                        <hr>
+                        
+                        <p>
+                        <div class="">
+                            <a class="" href="https://goo.gl/maps/AoofuL8V58vshNdS8">
+
+                                <img class="" height="210px;" src="https://madac.edu.sa/map.png" alt="">
+                            </a>
+                        </div>
+                        </p>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                All rights reserved to MADAC Academy - © 2022   
+                <!-- Copyright -->
+        </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+
+    <script>
+        let writetext = "";
+        let selectedPic = "";
+
+        function btnview1() {
+
+            writetext = document.getElementById("textinput").value;
+
+            selectedPic = "images/eidh2022.png";
+            addTextToImage();
+            document.getElementById("primesave1").hidden = true;
+            document.getElementById("btnsave1").hidden = false;
+            document.getElementById("btnsave2").hidden = true;
+
+
+        }
+
+        function btnview2() {
+
+            writetext = document.getElementById("textinput2").value;
+
+
+            selectedPic = "images/eidf.png";
+            downloadsecond();
+            document.getElementById("primesave2").hidden = true;
+            document.getElementById("btnsave1").hidden = true;
+                document.getElementById("btnsave2").hidden = false;
+        }
+
+        function saveMobile() {
+           
+          
+            const link = document.createElement("a");
+
+            if (selectedPic === "images/eidh2022.png") {
+
+                addTextToImage();
+                link.download = "images/eidh2022.png";
+                link.href = document.getElementById("canvas").toDataURL();
+            }
+            if (selectedPic === "images/eidf.png") {
+
+                downloadsecond();
+                link.download = "images/eidf.png";
+                link.href = document.getElementById("canvas1").toDataURL();
+            }
+
+            link.click();
+            link.delete;
+        }
+
+        // function btnclc() {
+        //     writetext = document.getElementById("textinput").value;
+        //     if (selectedPic === "") {
+        //         alert("select design!");
+        //         return;
+        //     }
+
+        //     if (selectedPic === "images/eidf.png") { downloadsecond(); }
+        //     else {
+        //         addTextToImage();
+        //     }
+
+        // }
+        function addTextToImage() {
+            var imgcanvas = document.getElementById("canvas");
+            var context = imgcanvas.getContext("2d");
+
+            // Draw Image function
+            var img = new Image();
+
+            img.src = "images/eidh2022.png";
+            img.onload = function () {
+                imgcanvas.width = img.naturalWidth;
+                imgcanvas.height = img.naturalHeight;
+                context.drawImage(img, 0, 0);
+                context.lineWidth = 1;
+                context.textAlign = "center";
+                context.fillStyle = "#FFFFFF";
+                context.lineStyle = "#FFFFFF";
+                context.font = "28px FaktArabicPro";
+                context.fillText(writetext, 370, 533);
+            };
+        }
+
+        function downloadsecond() {
+            var imgcanvas2 = document.getElementById("canvas1");
+            var context2 = imgcanvas2.getContext("2d");
+
+            // Draw Image function
+            var img2 = new Image();
+
+            img2.src = "images/eidf.png";
+            img2.onload = function () {
+                imgcanvas2.width = img2.naturalWidth;
+                imgcanvas2.height = img2.naturalHeight;
+                context2.drawImage(img2, 0, 0);
+                context2.lineWidth = 1;
+                context2.textAlign = "center";
+                context2.fillStyle = "#000";
+                context2.lineStyle = "#000";
+                context2.font = "28px FaktArabicPro";
+                context2.fillText(writetext, 370, 533);
+            };
+        }
+
+        downloadsecond();
+        addTextToImage();
+    </script>
+</body>
+
+</html>
